@@ -1,6 +1,10 @@
+import About from './components/About';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Services from './components/Services';
+import TechStack from './components/TechStack';
 import { useTheme } from './hooks/useTheme';
+import ContactForm from './components/ContactForm';
 
 function App() {
   const { isDark, toggleTheme } = useTheme();
@@ -10,6 +14,10 @@ function App() {
       <div className="min-h-screen flex flex-col">
         <Header isDark={isDark} toggleTheme={toggleTheme} />
         <Hero />
+        <About />
+        <TechStack />
+        <Services />
+        <ContactForm />
       </div>
     </div>
   );

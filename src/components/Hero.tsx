@@ -1,8 +1,7 @@
-import React from 'react';
 import { ArrowRight, Download } from 'lucide-react';
 import myPhoto from './../assets/me.jpg';
 
-const Hero: React.FC = () => {
+const Hero = () => {
   return (
     <section className="flex-1 flex items-center justify-center px-6 py-12 pt-4 lg:px-12">
       <div className="max-w-4xl mx-auto text-center">
