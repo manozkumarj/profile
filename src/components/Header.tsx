@@ -8,7 +8,32 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navItems = ['Home', 'About me', 'Services', 'My Work', 'Contact me'];
+  const navItems = [
+    {
+      name: 'Home',
+      href: '#home',
+    },
+    {
+      name: 'About me',
+      href: '#about',
+    },
+    {
+      name: 'Tech-stack',
+      href: '#tech-stack',
+    },
+    {
+      name: 'Services',
+      href: '#services',
+    },
+    // {
+    //   name: 'My Work',
+    //   href: '#work',
+    // },
+    {
+      name: 'Contact me',
+      href: '#contact',
+    },
+  ];
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -32,13 +57,13 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
           <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item, index) => (
               <a 
-                key={item}
-                href="#" 
+                key={item?.name}
+                href={item?.href} 
                 className={`text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 ${
                   index === 0 ? 'font-medium text-gray-900 dark:text-white' : ''
                 }`}
               >
-                {item}
+                {item?.name}
               </a>
             ))}
           </nav>
@@ -112,9 +137,9 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
           <nav className="flex-1 px-6 py-8">
             <ul className="space-y-6">
               {navItems.map((item, index) => (
-                <li key={item}>
+                <li key={item?.name}>
                   <a 
-                    href="#"
+                    href={item?.href}
                     onClick={closeMobileMenu}
                     className={`block text-lg font-medium transition-colors duration-200 ${
                       index === 0 
@@ -122,7 +147,7 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
                         : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
                     }`}
                   >
-                    {item}
+                    {item?.name}
                   </a>
                 </li>
               ))}

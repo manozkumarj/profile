@@ -5,6 +5,7 @@ import Services from './components/Services';
 import TechStack from './components/TechStack';
 import { useTheme } from './hooks/useTheme';
 import ContactForm from './components/ContactForm';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   const { isDark, toggleTheme } = useTheme();
@@ -19,6 +20,22 @@ function App() {
         <Services />
         <ContactForm />
       </div>
+      <Toaster
+        position="bottom-left"
+        reverseOrder={false}
+        gutter={8}
+        containerClassName=""
+        containerStyle={{}}
+        toastOptions={{
+          // Define default options
+          className: "",
+          duration: 3000,
+          style: {
+            background: "#fff",
+            color: "#363636",
+          },
+        }}
+      />
     </div>
   );
 }

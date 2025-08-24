@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Instagram, Github, Linkedin } from 'lucide-react';
+import toast from "react-hot-toast";
+import api from '../api/axios';
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -7,6 +9,7 @@ const ContactForm = () => {
         email: '',
         message: ''
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
@@ -15,18 +18,62 @@ const ContactForm = () => {
         });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setIsSubmitting(true);
+
         // Handle form submission here
-        console.log('Form submitted:', formData);
+        const _name = formData.name.trim();
+        const _email = formData.email.trim();
+        const _message = formData.message.trim();
+
+        if (!_name || !_email || !_message) {
+            toast.error("Please fill in all fields.");
+            setIsSubmitting(false);
+            return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(_email)) {
+            toast.error("Please enter a valid email address.");
+            setIsSubmitting(false);
+            return;
+        }
+
+        // console.log('Form submitted:', formData);
+
+        const response = await api.post('/send-email', {
+            name: _name,
+            email: _email,
+            message: _message
+        }, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => {
+            console.log("response --> ", res);
+            if (res.status === 200) {
+                toast.success("Message sent successfully!");
+                setFormData({ name: '', email: '', message: '' });
+            } else {
+                toast.error("Failed to send message. Please try again later.");
+            }
+        }).catch(err => {
+            toast.error("An error occurred. Please try again later.");
+            setIsSubmitting(false);
+        }).finally(() => {
+            setIsSubmitting(false);
+        });
     };
 
+    const notify = () => toast.success("Here is your toast.");
+
     return (
-        <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen pb-12 px-4 sm:px-6 lg:px-8" id="contact">
             <div className="max-w-7xl mx-auto">
                 {/* Main heading */}
-                <div className="text-center mb-16">
-                    <h1 className="text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-2">Contact</h1>
+                <div className="text-center max-md:mb-8 mb-16">
+                    <h1 className="text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-2">Contact me</h1>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
@@ -64,20 +111,22 @@ const ContactForm = () => {
                                     >
                                         <Mail size={20} />
                                     </a>
-                                    <a
+                                    {/* <a
                                         href="#"
                                         className="w-12 h-12 bg-gray-600 rounded-lg flex items-center justify-center text-white hover:bg-gray-700 transition-all duration-200 hover:scale-110"
                                     >
                                         <Instagram size={20} />
-                                    </a>
+                                    </a> */}
                                     <a
-                                        href="#"
+                                        href="https://github.com/manozkumarj"
+                                        target='_blank'
                                         className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-white hover:bg-gray-900 transition-all duration-200 hover:scale-110"
                                     >
                                         <Github size={20} />
                                     </a>
                                     <a
-                                        href="#"
+                                        target='_blank'
+                                        href="https://linkedin.com/in/manozkumarj"
                                         className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-all duration-200 hover:scale-110"
                                     >
                                         <Linkedin size={20} />
@@ -91,7 +140,7 @@ const ContactForm = () => {
                     <div className="lg:col-span-2">
                         <div className="mb-8">
                             <h2 className="text-3xl font-semibold text-gray-900 dark:text-white mb-1">Connect with me</h2>
-                            <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                            <p className="text-gray-600 dark:text-gray-400 text-lg">
                                 If you want to know more about me or my work, or if you would just like to say hello, send me a message. I'd love to hear from you.
                             </p>
                         </div>
@@ -151,14 +200,19 @@ const ContactForm = () => {
                                 </a>
                                 <button
                                     type="submit"
+                                    // onClick={notify}
+                                    disabled={isSubmitting}
                                     className="w-full sm:w-auto px-8 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all duration-200 shadow-lg hover:shadow-xl"
                                 >
-                                    Submit
+                                    {isSubmitting ? 'Sending...' : 'Send Message'}
                                 </button>
                             </div>
                         </form>
                     </div>
                 </div>
+
+
+
             </div>
         </div>
     );
