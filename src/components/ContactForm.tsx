@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Instagram, Github, Linkedin } from 'lucide-react';
+import { Mail, Github, Linkedin } from 'lucide-react';
 import toast from "react-hot-toast";
 import api from '../api/axios';
 
@@ -20,6 +20,9 @@ const ContactForm = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        if (isSubmitting) return; // Prevent multiple submissions
+
         setIsSubmitting(true);
 
         // Handle form submission here
@@ -51,7 +54,7 @@ const ContactForm = () => {
                 'Content-Type': 'application/json'
             }
         }).then(res => {
-            console.log("response --> ", res);
+            // console.log("response --> ", res);
             if (res.status === 200) {
                 toast.success("Message sent successfully!");
                 setFormData({ name: '', email: '', message: '' });
@@ -66,7 +69,7 @@ const ContactForm = () => {
         });
     };
 
-    const notify = () => toast.success("Here is your toast.");
+    // const notify = () => toast.success("Here is your toast.");
 
     return (
         <div className="min-h-screen pb-12 px-4 sm:px-6 lg:px-8" id="contact">
@@ -154,6 +157,7 @@ const ContactForm = () => {
                                     type="text"
                                     id="name"
                                     name="name"
+                                    disabled={isSubmitting}
                                     value={formData.name}
                                     onChange={handleChange}
                                     placeholder="Enter your name"
@@ -169,6 +173,7 @@ const ContactForm = () => {
                                     type="email"
                                     id="email"
                                     name="email"
+                                    disabled={isSubmitting}
                                     value={formData.email}
                                     onChange={handleChange}
                                     placeholder="Enter your email"
@@ -183,6 +188,7 @@ const ContactForm = () => {
                                 <textarea
                                     id="message"
                                     name="message"
+                                    disabled={isSubmitting}
                                     rows={6}
                                     value={formData.message}
                                     onChange={handleChange}
@@ -202,17 +208,24 @@ const ContactForm = () => {
                                     type="submit"
                                     // onClick={notify}
                                     disabled={isSubmitting}
-                                    className="w-full sm:w-auto px-8 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all duration-200 shadow-lg hover:shadow-xl"
+                                    className="flex items-centerw-full sm:w-auto px-8 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all duration-200 shadow-lg hover:shadow-xl"
                                 >
+                                    {isSubmitting && (
+                                        <div
+                                            className={`inline-block size-6 mr-3 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-white motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white`}
+                                            role="status"
+                                        >
+                                            <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
+                                                Loading...
+                                            </span>
+                                        </div>
+                                    )}
                                     {isSubmitting ? 'Sending...' : 'Send Message'}
                                 </button>
                             </div>
                         </form>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
     );

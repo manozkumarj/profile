@@ -6,6 +6,7 @@ import TechStack from './components/TechStack';
 import { useTheme } from './hooks/useTheme';
 import ContactForm from './components/ContactForm';
 import { Toaster } from 'react-hot-toast';
+import Footer from './components/Footer';
 
 function App() {
   const { isDark, toggleTheme } = useTheme();
@@ -19,6 +20,7 @@ function App() {
         <TechStack />
         <Services />
         <ContactForm />
+        <Footer />
       </div>
       <Toaster
         position="bottom-left"
