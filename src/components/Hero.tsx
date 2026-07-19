@@ -34,7 +34,7 @@ const Hero = () => {
         {/* Main Title */}
         <div className="mb-8">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-            Fullstack Web & Mobile Developer
+            Technical Lead and Fullstack Web & Mobile Developer
             based in India.
           </h2>
         </div>
@@ -42,8 +42,8 @@ const Hero = () => {
         {/* Description */}
         <div className="mb-12">
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            I'm a Fullstack Web & Mobile developer from Hyderabad, India. Having 9+ years of experience in multiple
-            technologies like React, Node, Python, etc.
+            I'm a Technical Lead and Senior Fullstack Web & Mobile developer from Hyderabad, India. Having 10+ years of experience in multiple
+            technologies like React, Node, Python, React Native, etc.
           </p>
         </div>
 

@@ -23,7 +23,7 @@ function App() {
         <Footer />
       </div>
       <Toaster
-        position="bottom-left"
+        position="bottom-center"
         reverseOrder={false}
         gutter={8}
         containerClassName=""
