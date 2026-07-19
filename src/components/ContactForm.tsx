@@ -98,10 +98,10 @@ const ContactForm = () => {
                             <div className="text-left">
                                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-1">Email</h3>
                                 <a
-                                    href="mailto:manojmani517@gmail.com"
+                                    href="mailto:manoj76342@gmail.com"
                                     className="text-gray-600 dark:text-gray-400 font-medium hover:text-gray-700 transition-colors duration-200 tracking-wide"
                                 >
-                                    manojmani517@gmail.com
+                                    manoj76342@gmail.com
                                 </a>
                             </div>
 
@@ -119,7 +119,7 @@ const ContactForm = () => {
                                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-2">Social</h3>
                                 <div className="flex justify-start space-x-4">
                                     <a
-                                        href="mailto:manojmani517@gmail.com"
+                                        href="mailto:manoj76342@gmail.com"
                                         className="w-12 h-12 bg-orange-500 border border-zinc-50 rounded-lg flex items-center justify-center text-white hover:bg-orange-600 transition-all duration-200 hover:scale-110"
                                     >
                                         <Mail size={20} />
@@ -212,7 +212,7 @@ const ContactForm = () => {
 
                             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                                 <a
-                                    href="mailto:manojmani517@gmail.com"
+                                    href="mailto:manoj76342@gmail.com"
                                     className="text-gray-900 underline hover:text-gray-600 dark:text-gray-400 transition-colors duration-200"
                                 >
                                     Send me email directly
