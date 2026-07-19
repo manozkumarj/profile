@@ -56,12 +56,11 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
           {/* Navigation - Hidden on mobile */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item, index) => (
-              <a 
+              <a
                 key={item?.name}
-                href={item?.href} 
-                className={`text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 ${
-                  index === 0 ? 'font-medium text-gray-900 dark:text-white' : ''
-                }`}
+                href={item?.href}
+                className={`text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 ${index === 0 ? 'font-medium text-gray-900 dark:text-white' : ''
+                  }`}
               >
                 {item?.name}
               </a>
@@ -84,7 +83,7 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
             </button>
 
             {/* Contact button - Hidden on small screens */}
-            <button className="hidden sm:flex items-center space-x-2 px-6 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
+            <button className="hidden sm:flex items-center space-x-2 px-6 py-3 bg-white dark:bg-gray-800 border border-gray-200 rounded-full hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
               <span className="text-gray-700 dark:text-gray-300">Contact</span>
               <ArrowUpRight className="w-4 h-4 text-gray-700 dark:text-gray-300" />
             </button>
@@ -107,16 +106,15 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={closeMobileMenu}
         />
       )}
 
       {/* Mobile Menu Sidebar */}
-      <div className={`fixed top-0 right-0 h-full w-80 bg-white dark:bg-gray-900 shadow-2xl transform transition-transform duration-300 ease-in-out z-50 lg:hidden ${
-        isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-      }`}>
+      <div className={`fixed top-0 right-0 h-full w-80 bg-white dark:bg-gray-900 shadow-2xl transform transition-transform duration-300 ease-in-out z-50 lg:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}>
         <div className="flex flex-col h-full">
           {/* Mobile menu header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
@@ -138,14 +136,13 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
             <ul className="space-y-6">
               {navItems.map((item, index) => (
                 <li key={item?.name}>
-                  <a 
+                  <a
                     href={item?.href}
                     onClick={closeMobileMenu}
-                    className={`block text-lg font-medium transition-colors duration-200 ${
-                      index === 0 
-                        ? 'text-gray-900 dark:text-white' 
-                        : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
-                    }`}
+                    className={`block text-lg font-medium transition-colors duration-200 ${index === 0
+                      ? 'text-gray-900 dark:text-white'
+                      : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+                      }`}
                   >
                     {item?.name}
                   </a>
@@ -156,7 +153,7 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
 
           {/* Mobile menu footer */}
           <div className="p-6 border-t border-gray-200 dark:border-gray-700">
-            <button 
+            <button
               onClick={closeMobileMenu}
               className="w-full flex items-center justify-center space-x-2 px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors duration-200"
             >

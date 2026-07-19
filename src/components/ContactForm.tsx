@@ -21,7 +21,11 @@ const ContactForm = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (isSubmitting) return; // Prevent multiple submissions
+        // Prevent multiple submissions
+        if (isSubmitting) {
+            toast.error("Multiple submissions are not allowed.");
+            return;
+        }
 
         setIsSubmitting(true);
 
@@ -39,6 +43,12 @@ const ContactForm = () => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(_email)) {
             toast.error("Please enter a valid email address.");
+            setIsSubmitting(false);
+            return;
+        }
+
+        if (_message.length > 1000) {
+            toast.error("Message is too long. Please enter a message less than 1000 characters.");
             setIsSubmitting(false);
             return;
         }
@@ -110,7 +120,7 @@ const ContactForm = () => {
                                 <div className="flex justify-start space-x-4">
                                     <a
                                         href="mailto:manojmani517@gmail.com"
-                                        className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center text-white hover:bg-orange-600 transition-all duration-200 hover:scale-110"
+                                        className="w-12 h-12 bg-orange-500 border border-zinc-50 rounded-lg flex items-center justify-center text-white hover:bg-orange-600 transition-all duration-200 hover:scale-110"
                                     >
                                         <Mail size={20} />
                                     </a>
@@ -123,14 +133,14 @@ const ContactForm = () => {
                                     <a
                                         href="https://github.com/manozkumarj"
                                         target='_blank'
-                                        className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-white hover:bg-gray-900 transition-all duration-200 hover:scale-110"
+                                        className="w-12 h-12 bg-gray-800 border border-zinc-50 rounded-lg flex items-center justify-center text-white hover:bg-gray-900 transition-all duration-200 hover:scale-110"
                                     >
                                         <Github size={20} />
                                     </a>
                                     <a
                                         target='_blank'
                                         href="https://linkedin.com/in/manozkumarj"
-                                        className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-all duration-200 hover:scale-110"
+                                        className="w-12 h-12 bg-blue-600 border border-zinc-50 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-all duration-200 hover:scale-110"
                                     >
                                         <Linkedin size={20} />
                                     </a>
@@ -151,49 +161,52 @@ const ContactForm = () => {
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-gray-900 dark:text-white leading-tight mb-2">
-                                    Name
+                                    Name*
                                 </label>
                                 <input
                                     type="text"
                                     id="name"
                                     name="name"
+                                    required
                                     disabled={isSubmitting}
                                     value={formData.name}
                                     onChange={handleChange}
                                     placeholder="Enter your name"
-                                    className="w-full px-4 py-3 bg-gray-700 text-white placeholder-gray-400 rounded-lg border-0 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all duration-200"
+                                    className="w-full px-4 py-3 bg-white dark:bg-gray-700 text-black dark:text-white placeholder-gray-400 rounded-lg border-2 border-zinc-500 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all duration-200"
                                 />
                             </div>
 
                             <div>
                                 <label htmlFor="email" className="block text-sm font-medium text-gray-900 dark:text-white leading-tight mb-2">
-                                    Email
+                                    Email*
                                 </label>
                                 <input
                                     type="email"
                                     id="email"
                                     name="email"
+                                    required
                                     disabled={isSubmitting}
                                     value={formData.email}
                                     onChange={handleChange}
                                     placeholder="Enter your email"
-                                    className="w-full px-4 py-3 bg-gray-700 text-white placeholder-gray-400 rounded-lg border-0 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all duration-200"
+                                    className="w-full px-4 py-3 bg-white dark:bg-gray-700 text-black dark:text-white placeholder-gray-400 rounded-lg border-2 border-zinc-500 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all duration-200"
                                 />
                             </div>
 
                             <div>
                                 <label htmlFor="message" className="block text-sm font-medium text-gray-900 dark:text-white leading-tight mb-2">
-                                    Message
+                                    Message* (Max 1000 characters)
                                 </label>
                                 <textarea
                                     id="message"
                                     name="message"
+                                    required
                                     disabled={isSubmitting}
                                     rows={6}
                                     value={formData.message}
                                     onChange={handleChange}
                                     placeholder="Enter your message"
-                                    className="w-full px-4 py-3 bg-gray-700 text-white placeholder-gray-400 rounded-lg border-0 focus:ring-2 focus:ring-indigo-500 focus:outline-none resize-vertical transition-all duration-200"
+                                    className="w-full px-4 py-3 bg-white dark:bg-gray-700 text-black dark:text-white placeholder-gray-400 rounded-lg border-2 border-zinc-500 focus:ring-2 focus:ring-indigo-500 focus:outline-none resize-vertical transition-all duration-200"
                                 />
                             </div>
 

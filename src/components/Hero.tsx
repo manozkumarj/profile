@@ -8,7 +8,7 @@ const Hero = () => {
         {/* Profile Image */}
         <div className="mb-8">
           <div className="w-32 h-[180px] mx-auto rounded-full overflow-hidden bg-gray-200 dark:bg-gray-700 ring-4 ring-white shadow-xl">
-            <img 
+            <img
               src={myPhoto}
               alt="Manoj Kumar"
               className="w-full h-full object-cover"
@@ -35,7 +35,7 @@ const Hero = () => {
         {/* Description */}
         <div className="mb-12">
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            I'm a Fullstack Web & Mobile developer from Hyderabad, India. Having 9+ years of experience in multiple 
+            I'm a Fullstack Web & Mobile developer from Hyderabad, India. Having 9+ years of experience in multiple
             technologies like React, Node, Python, etc.
           </p>
         </div>
@@ -49,7 +49,7 @@ const Hero = () => {
           </button>
 
           {/* Resume Button */}
-          <button className="group flex items-center space-x-3 px-8 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
+          <button className="group flex items-center space-x-3 px-8 py-4 bg-white dark:bg-gray-800 border border-gray-200 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
             <span className="font-medium">My resume</span>
             <Download className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-200" />
           </button>
