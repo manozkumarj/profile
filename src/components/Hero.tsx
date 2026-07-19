@@ -2,6 +2,13 @@ import { ArrowRight, Download } from 'lucide-react';
 import myPhoto from './../assets/me.jpg';
 
 const Hero = () => {
+
+  const scrollToContact = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
+  };
   return (
     <section className="flex-1 flex items-center justify-center px-6 py-12 pt-4 lg:px-12">
       <div className="max-w-4xl mx-auto text-center">
@@ -43,16 +50,16 @@ const Hero = () => {
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
           {/* Contact Me Button */}
-          <button className="group flex items-center space-x-3 px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-full hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
+          <button className="group flex items-center space-x-3 px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-full hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl" onClick={scrollToContact}>
             <span className="font-medium">Contact me</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
           </button>
 
           {/* Resume Button */}
-          <button className="group flex items-center space-x-3 px-8 py-4 bg-white dark:bg-gray-800 border border-gray-200 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
+          {/* <button className="group flex items-center space-x-3 px-8 py-4 bg-white dark:bg-gray-800 border border-gray-200 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
             <span className="font-medium">My resume</span>
             <Download className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-200" />
-          </button>
+          </button> */}
         </div>
       </div>
     </section>
