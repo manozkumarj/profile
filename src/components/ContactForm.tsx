@@ -100,7 +100,7 @@ const ContactForm = () => {
                 <div className="max-w-7xl mx-auto flex max-lg:flex-col max-lg:gap-6">
                     <div className="w-1/2 max-lg:w-full">
                         <div className="max-lg:text-center max-md:mb-8 mb-16 max-lg:mb-8">
-                            <h1 className="text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-2">Contact me</h1>
+                            <h1 className="text-5xl max-lg:text-4xl font-bold text-gray-900 dark:text-white leading-tight mb-2">Contact me</h1>
                         </div>
 
                         <div className="w-full">
@@ -168,9 +168,9 @@ const ContactForm = () => {
                     {/* Contact Form - Right Side */}
                     <div className="lg:col-span-2 max-lg:px-6">
                         <div className="mb-8">
-                            <h2 className="text-3xl max-lg:mt-8 max-lg:text-5xl max-lg:text-center font-semibold text-gray-900 dark:text-white mb-1">Connect with me</h2>
-                            <p className="text-gray-600 max-lg:mt-2 max-lg:text-center dark:text-gray-400 text-lg">
-                                If you want to know more about me or my work, or if you would just like to say hello, send me a message. I'd love to hear from you.
+                            <h2 className="text-3xl max-lg:mt-8 max-lg:text-4xl max-md:font-bold max-lg:text-center font-semibold text-gray-900 dark:text-white mb-1">Connect with me</h2>
+                            <p className="text-gray-600 max-lg:mt-3 max-lg:text-center dark:text-gray-400 text-lg">
+                                If you want to know more about me or my work, or if you would just like to say 'hello', send me a message. I'd love to hear from you.
                             </p>
                         </div>
 
