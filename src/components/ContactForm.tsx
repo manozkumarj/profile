@@ -109,7 +109,7 @@ const ContactForm = () => {
                             <div className="text-left">
                                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-1">Address</h3>
                                 <div className="text-gray-600 dark:text-gray-400 font-medium tracking-wide">
-                                    <div>Jagtial, Telangana</div>
+                                    <div>Jagtial, Telangana,</div>
                                     <div>India</div>
                                 </div>
                             </div>
