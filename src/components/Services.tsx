@@ -36,7 +36,7 @@ const Services = () => {
                     Mobile Application Development
                 </h5>
                 <div className="max-w-7xl mx-auto flex items-center justify-between text-gray-600 dark:text-gray-400">
-                    I design and develop cross-platform mobile applications that deliver a seamless, native-like experience on both iOS and Android. 
+                    I design and develop cross-platform mobile applications that deliver a seamless, native-like experience on both iOS and Android.
                     With React Native at the core, I build apps that are fast, scalable, and tailored to your business needs — all while reducing development time and cost.
                 </div>
                 <p className="max-w-7xl mx-auto text-gray-600 dark:text-gray-400 mt-3">
@@ -47,7 +47,7 @@ const Services = () => {
                         <li><span className="font-semibold">Authentication & Security</span> – Implementing secure login systems with Firebase Auth, JWT, and OAuth for user management, role-based access, and data protection.</li>
                         <li><span className="font-semibold">Real-Time Chat & Messaging</span> – Developing chat and collaboration features using WebSockets / Firebase Realtime Database, enabling instant communication and live updates within your app.</li>
                         <li><span className="font-semibold">Push Notifications</span> – Keeping users engaged with personalized push notifications powered by Firebase Cloud Messaging (FCM), including scheduling, targeting, and custom alerts.</li>
-                        <li><span className="font-semibold">App Store & Play Store Deployment</span> – End-to-end support in preparing, testing, and publishing your app to the Apple App Store and Google Play Store.</li>
+                        {/* <li><span className="font-semibold">App Store & Play Store Deployment</span> – End-to-end support in preparing, testing, and publishing your app to the Apple App Store and Google Play Store.</li> */}
                     </ul>
                 </p>
             </div>
@@ -58,7 +58,7 @@ const Services = () => {
                     Backend Application Development
                 </h5>
                 <div className="max-w-7xl mx-auto flex items-center justify-between text-gray-600 dark:text-gray-400">
-                    I specialize in building scalable, secure, and high-performance backend systems that power modern applications. 
+                    I specialize in building scalable, secure, and high-performance backend systems that power modern applications.
                     From designing robust APIs to managing data flow and real-time communication, I ensure your application runs smoothly and reliably.
                 </div>
                 <p className="max-w-7xl mx-auto text-gray-600 dark:text-gray-400 mt-3">

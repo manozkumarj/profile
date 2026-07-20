@@ -1,4 +1,5 @@
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+// import { Download } from 'lucide-react';
 import myPhoto from './../assets/me.jpg';
 
 const Hero = () => {
@@ -34,15 +35,15 @@ const Hero = () => {
         {/* Main Title */}
         <div className="mb-8">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-            Technical Lead and Fullstack Web & Mobile Developer
-            based in India.
+            Technical Lead and Full stack Web & Mobile Developer
+            based in Hyderabad, India.
           </h2>
         </div>
 
         {/* Description */}
         <div className="mb-12">
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            I'm a Technical Lead and Senior Fullstack Web & Mobile developer from Hyderabad, India. Having 10+ years of experience in multiple
+            I'm a Technical Lead and Senior Full stack Web & Mobile developer from Hyderabad, India. Having 10+ years of experience in multiple
             technologies like React, Node, Python, React Native, etc.
           </p>
         </div>
