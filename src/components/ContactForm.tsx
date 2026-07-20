@@ -94,78 +94,82 @@ const ContactForm = () => {
     // const notify = () => toast.success("Here is your toast.");
 
     return (
-        <div className="min-h-screen pb-12 px-4 sm:px-6 lg:px-8" id="contact">
+        <div className="pb-2 px-4 sm:px-6 lg:px-8" id="contact">
             <div className="max-w-7xl mx-auto">
                 {/* Main heading */}
-                <div className="text-center max-md:mb-8 mb-16">
-                    <h1 className="text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-2">Contact me</h1>
-                </div>
+                <div className="max-w-7xl mx-auto flex max-lg:flex-col max-lg:gap-6">
+                    <div className="w-1/2 max-lg:w-full">
+                        <div className="max-lg:text-center max-md:mb-8 mb-16 max-lg:mb-8">
+                            <h1 className="text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-2">Contact me</h1>
+                        </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+                        <div className="w-full">
 
-                    {/* Contact Information - Left Side */}
-                    <div className="lg:col-span-1">
-                        <div className="space-y-8">
-                            {/* Email Section */}
-                            <div className="text-left">
-                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-1">Email</h3>
-                                <a
-                                    href="mailto:manoj76342@gmail.com"
-                                    className="text-gray-600 dark:text-gray-400 font-medium hover:text-gray-700 transition-colors duration-200 tracking-wide"
-                                >
-                                    manoj76342@gmail.com
-                                </a>
-                            </div>
+                            {/* Contact Information - Left Side */}
+                            <div className="lg:col-span-1 max-lg:flex max-lg:justify-center max-lg:items-center">
+                                <div className="space-y-8">
+                                    {/* Email Section */}
+                                    <div className="text-left max-lg:text-center">
+                                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-1">Email</h3>
+                                        <a
+                                            href="mailto:manoj76342@gmail.com"
+                                            className="text-gray-600 dark:text-gray-400 font-medium hover:text-gray-700 transition-colors duration-200 tracking-wide"
+                                        >
+                                            manoj76342@gmail.com
+                                        </a>
+                                    </div>
 
-                            {/* Address Section */}
-                            <div className="text-left">
-                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-1">Address</h3>
-                                <div className="text-gray-600 dark:text-gray-400 font-medium tracking-wide">
-                                    <div>Jagtial, Telangana,</div>
-                                    <div>India</div>
-                                </div>
-                            </div>
+                                    {/* Address Section */}
+                                    <div className="text-left max-lg:text-center">
+                                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-1">Address</h3>
+                                        <div className="text-gray-600 dark:text-gray-400 font-medium tracking-wide max-lg:flex">
+                                            <div>Jagtial, Telangana,</div>
+                                            <div>India</div>
+                                        </div>
+                                    </div>
 
-                            {/* Social Section */}
-                            <div className="text-left">
-                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-2">Social</h3>
-                                <div className="flex justify-start space-x-4">
-                                    <a
-                                        href="mailto:manoj76342@gmail.com"
-                                        className="w-12 h-12 bg-orange-500 border border-zinc-50 rounded-lg flex items-center justify-center text-white hover:bg-orange-600 transition-all duration-200 hover:scale-110"
-                                    >
-                                        <Mail size={20} />
-                                    </a>
-                                    {/* <a
+                                    {/* Social Section */}
+                                    <div className="text-left max-lg:text-center">
+                                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-2">Social</h3>
+                                        <div className="flex justify-start space-x-4">
+                                            <a
+                                                href="mailto:manoj76342@gmail.com"
+                                                className="w-12 h-12 bg-orange-500 border border-zinc-50 rounded-lg flex items-center justify-center text-white hover:bg-orange-600 transition-all duration-200 hover:scale-110"
+                                            >
+                                                <Mail size={20} />
+                                            </a>
+                                            {/* <a
                                         href="#"
                                         className="w-12 h-12 bg-gray-600 rounded-lg flex items-center justify-center text-white hover:bg-gray-700 transition-all duration-200 hover:scale-110"
                                     >
                                         <Instagram size={20} />
                                     </a> */}
-                                    <a
-                                        href="https://github.com/manozkumarj"
-                                        target='_blank'
-                                        className="w-12 h-12 bg-gray-800 border border-zinc-50 rounded-lg flex items-center justify-center text-white hover:bg-gray-900 transition-all duration-200 hover:scale-110"
-                                    >
-                                        <Github size={20} />
-                                    </a>
-                                    <a
-                                        target='_blank'
-                                        href="https://linkedin.com/in/manozkumarj"
-                                        className="w-12 h-12 bg-blue-600 border border-zinc-50 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-all duration-200 hover:scale-110"
-                                    >
-                                        <Linkedin size={20} />
-                                    </a>
+                                            <a
+                                                href="https://github.com/manozkumarj"
+                                                target='_blank'
+                                                className="w-12 h-12 bg-gray-800 border border-zinc-50 rounded-lg flex items-center justify-center text-white hover:bg-gray-900 transition-all duration-200 hover:scale-110"
+                                            >
+                                                <Github size={20} />
+                                            </a>
+                                            <a
+                                                target='_blank'
+                                                href="https://linkedin.com/in/manozkumarj"
+                                                className="w-12 h-12 bg-blue-600 border border-zinc-50 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-all duration-200 hover:scale-110"
+                                            >
+                                                <Linkedin size={20} />
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     {/* Contact Form - Right Side */}
-                    <div className="lg:col-span-2">
+                    <div className="lg:col-span-2 max-lg:px-6">
                         <div className="mb-8">
-                            <h2 className="text-3xl font-semibold text-gray-900 dark:text-white mb-1">Connect with me</h2>
-                            <p className="text-gray-600 dark:text-gray-400 text-lg">
+                            <h2 className="text-3xl max-lg:mt-8 max-lg:text-5xl max-lg:text-center font-semibold text-gray-900 dark:text-white mb-1">Connect with me</h2>
+                            <p className="text-gray-600 max-lg:mt-2 max-lg:text-center dark:text-gray-400 text-lg">
                                 If you want to know more about me or my work, or if you would just like to say hello, send me a message. I'd love to hear from you.
                             </p>
                         </div>
@@ -222,10 +226,10 @@ const ContactForm = () => {
                                 />
                             </div>
 
-                            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                            <div className="flex flex-col sm:flex-row justify-between items-start max-md:justify-center max-md:items-center gap-4">
                                 <a
                                     href="mailto:manoj76342@gmail.com"
-                                    className="text-gray-900 underline hover:text-gray-600 dark:text-gray-400 transition-colors duration-200"
+                                    className="max-md:hidden text-gray-900 underline hover:text-gray-600 dark:text-gray-400 transition-colors duration-200"
                                 >
                                     Send me email directly
                                 </a>

@@ -182,7 +182,7 @@ const TechStack = () => {
                         {techsAndTools.map((tech) => (
                             <div key={tech.name} onClick={() => notify(tech.name)} className="flex gap-5 items-center max-sm:justify-center p-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:scale-105 transform transition-transform duration-200 border !border-gray-100 dark:!border-gray-200 cursor-pointer">
                                 {tech.icon}
-                                <span className="text-sm text-gray-700 dark:text-gray-300">{tech.name}</span>
+                                <span className="text-md font-bold text-gray-700 dark:text-gray-300">{tech.name}</span>
                             </div>
                         ))}
                     </div>

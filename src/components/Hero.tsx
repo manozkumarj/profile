@@ -26,7 +26,7 @@ const Hero = () => {
 
         {/* Greeting */}
         <div className="mb-6">
-          <h1 className="text-xl text-gray-700 dark:text-gray-300 font-normal">
+          <h1 className="w-fit m-auto px-4 pb-2 text-3xl font-bold text-gray-800 dark:text-gray-200 border-b-4 dark:border-b-gray-200 italic">
             Hi! I'm Manoj Kumar Jadala{' '}
             <span className="inline-block animate-bounce">👋</span>
           </h1>
@@ -34,7 +34,7 @@ const Hero = () => {
 
         {/* Main Title */}
         <div className="mb-8">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
             Technical Lead and Full stack Web & Mobile Developer
             based in Hyderabad, India.
           </h2>
@@ -42,7 +42,7 @@ const Hero = () => {
 
         {/* Description */}
         <div className="mb-12">
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed">
             I'm a Technical Lead and Senior Full stack Web & Mobile developer from Hyderabad, India. Having 10+ years of experience in multiple
             technologies like React, Node, Python, React Native, etc.
           </p>

@@ -66,7 +66,7 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
               <a
                 key={item?.name}
                 href={item?.href}
-                className={`text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 ${index === 0 ? 'font-medium text-gray-900 dark:text-white' : ''
+                className={`text-gray-700 text-xl dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 ${index === 0 ? 'font-medium text-gray-900 dark:text-white' : ''
                   }`}
               >
                 {item?.name}
@@ -91,7 +91,7 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
 
             {/* Contact button - Hidden on small screens */}
             <button className="hidden sm:flex items-center space-x-2 px-6 py-3 bg-white dark:bg-gray-800 border border-gray-200 rounded-full hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200" onClick={scrollToContact}>
-              <span className="text-gray-700 dark:text-gray-300">Contact</span>
+              <span className="text-md font-bold text-gray-700 dark:text-gray-300">Contact</span>
               <ArrowUpRight className="w-4 h-4 text-gray-700 dark:text-gray-300" />
             </button>
 
@@ -146,7 +146,7 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
                   <a
                     href={item?.href}
                     onClick={closeMobileMenu}
-                    className={`block text-lg font-medium transition-colors duration-200 ${index === 0
+                    className={`block font-bold text-lg transition-colors duration-200 ${index === 0
                       ? 'text-gray-900 dark:text-white'
                       : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
                       }`}
