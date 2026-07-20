@@ -30,6 +30,7 @@ import jest from './../assets/Jest.svg';
 import cypress from './../assets/Cypress.svg';
 import redis from './../assets/Redis.svg';
 import angular from './../assets/Angular.svg';
+import cicd from './../assets/ci-cd.webp';
 import toast from "react-hot-toast";
 
 const techsAndTools = [
@@ -92,6 +93,10 @@ const techsAndTools = [
     {
         name: "React Native",
         icon: <img src={reactNative} alt="React Native" className="w-8 h-8" />
+    },
+    {
+        name: "Angular",
+        icon: <img src={angular} alt="Angular" className="w-8 h-8" />
     },
     {
         name: "Postman",
@@ -158,9 +163,9 @@ const techsAndTools = [
         icon: <img src={redis} alt="Redis" className="w-8 h-8" />
     },
     {
-        name: "Angular",
-        icon: <img src={angular} alt="Angular" className="w-8 h-8" />
-    },
+        name: "CI/CD",
+        icon: <img src={cicd} alt="CI/CD" className="w-14 h-8 rounded" />
+    }
 ];
 
 const notify = (_title: string) => toast(`${_title}`);

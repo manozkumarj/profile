@@ -25,7 +25,7 @@ const Hero = () => {
         </div>
 
         {/* Greeting */}
-        <div className="mb-6">
+        <div className="mb-8">
           <h1 className="w-fit m-auto px-4 pb-2 text-3xl font-bold text-gray-800 dark:text-gray-200 border-b-4 dark:border-b-gray-200 italic">
             Hi! I'm Manoj Kumar Jadala{' '}
             <span className="inline-block animate-bounce">👋</span>
