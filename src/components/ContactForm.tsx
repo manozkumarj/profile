@@ -55,7 +55,7 @@ const ContactForm = () => {
 
         // console.log('Form submitted:', formData);
 
-        const response = await api.post('/send-email', {
+        await api.post('/send-email', {
             name: _name,
             email: _email,
             message: _message
@@ -71,7 +71,7 @@ const ContactForm = () => {
             } else {
                 toast.error("Failed to send message. Please try again later.");
             }
-        }).catch(err => {
+        }).catch(() => {
             toast.error("An error occurred. Please try again later.");
             setIsSubmitting(false);
         }).finally(() => {

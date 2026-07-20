@@ -163,7 +163,7 @@ const techsAndTools = [
     },
 ];
 
-const notify = (_title: string) => toast.success(`${_title}`);
+const notify = (_title: string) => toast(`${_title}`);
 
 const TechStack = () => {
     return (
