@@ -56,7 +56,7 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <a href='/' className="text-2xl font-bold text-gray-900 dark:text-white">&#123; &lt;Manoj /&gt; &#125;</a>
+            <a href='/profile' className="text-2xl font-bold text-gray-900 dark:text-white">&#123; &lt;Manoj /&gt; &#125;</a>
             {/* <div className="w-2 h-2 bg-red-500 rounded-full"></div> */}
           </div>
 
