@@ -41,8 +41,11 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+  };
+
+  const scrollToContact = () => {
     window.scrollTo({
-      top: document.body.scrollHeight,
+      top: document.getElementById('contact')?.offsetTop,
       behavior: 'smooth'
     });
   };
@@ -87,7 +90,7 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
             </button>
 
             {/* Contact button - Hidden on small screens */}
-            <button className="hidden sm:flex items-center space-x-2 px-6 py-3 bg-white dark:bg-gray-800 border border-gray-200 rounded-full hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200" onClick={closeMobileMenu}>
+            <button className="hidden sm:flex items-center space-x-2 px-6 py-3 bg-white dark:bg-gray-800 border border-gray-200 rounded-full hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200" onClick={scrollToContact}>
               <span className="text-gray-700 dark:text-gray-300">Contact</span>
               <ArrowUpRight className="w-4 h-4 text-gray-700 dark:text-gray-300" />
             </button>
