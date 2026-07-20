@@ -47,6 +47,18 @@ const ContactForm = () => {
             return;
         }
 
+        if (_name.length > 64) {
+            toast.error("Name is too long. Please enter a name less than 64 characters.");
+            setIsSubmitting(false);
+            return;
+        }
+
+        if (_email.length > 64) {
+            toast.error("Email is too long. Please enter an email less than 64 characters.");
+            setIsSubmitting(false);
+            return;
+        }
+
         if (_message.length > 1000) {
             toast.error("Message is too long. Please enter a message less than 1000 characters.");
             setIsSubmitting(false);
