@@ -8,7 +8,7 @@ const Services = () => {
             </div>
 
             {/* Web Development */}
-            <div className="w-full px-6 py-6 lg:px-12 relative z-50">
+            <div className="w-full px-6 py-6 lg:px-12 relative z-40">
                 <h5 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white leading-tight mb-4">
                     Web Development
                 </h5>
@@ -31,7 +31,7 @@ const Services = () => {
             </div>
 
             {/* Mobile Development */}
-            <div className="w-full px-6 pt-2 pb-3 lg:px-12 relative z-50">
+            <div className="w-full px-6 pt-2 pb-3 lg:px-12 relative z-40">
                 <h5 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white leading-tight mb-4">
                     Mobile Application Development
                 </h5>
@@ -53,7 +53,7 @@ const Services = () => {
             </div>
 
             {/* Mobile Development */}
-            <div className="w-full px-6 pt-5 pb-3 lg:px-12 relative z-50">
+            <div className="w-full px-6 pt-5 pb-3 lg:px-12 relative z-40">
                 <h5 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white leading-tight mb-4">
                     Backend Application Development
                 </h5>

@@ -172,18 +172,18 @@ const notify = (_title: string) => toast(`${_title}`);
 
 const TechStack = () => {
     return (
-        <section className="flex-1 px-6 py-12 pt-4 lg:px-12" id="tech-stack">
+        <section className="flex-1 px-6 py-12 pt-4 lg:px-12 relative z-30" id="tech-stack">
             <div className=" flex items-center justify-center max-w-4xl mx-auto text-center">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
                     Technologies and Tools
                 </h2>
             </div>
-            <div className="w-full px-6 py-6 lg:px-12 relative z-50">
+            <div className="w-full px-6 py-6 lg:px-12 relative z-30">
                 <p className="max-w-7xl mx-auto flex items-center justify-between text-gray-600 dark:text-gray-400">
                     Using a combination of cutting-edge technologies and reliable open-source software I build user-focused, performant apps and websites for smartphones, tablets, and desktops.
                 </p>
-                <div className="max-w-7xl mx-auto flex items-center justify-between text-gray-600 dark:text-gray-400 mt-8">
-                    <div className="w-full grid grid-cols-5 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-4 gap-6">
+                <div className="max-w-7xl mx-auto flex items-center justify-between text-gray-600 dark:text-gray-400 mt-8 relative z-30">
+                    <div className="w-full grid grid-cols-5 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-4 gap-6 relative z-30">
                         {techsAndTools.map((tech) => (
                             <div key={tech.name} onClick={() => notify(tech.name)} className="flex gap-5 items-center max-sm:justify-center p-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow hover:scale-105 transform transition-transform duration-200 border !border-gray-100 dark:!border-gray-200 cursor-pointer">
                                 {tech.icon}

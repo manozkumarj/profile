@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
 
   return (
     <>
-      <header className="w-full px-6 py-6 lg:px-12 relative z-50">
+      <header className="w-full px-6 py-6 lg:px-12">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
@@ -114,13 +114,13 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/50 lg:hidden z-[60]"
           onClick={closeMobileMenu}
         />
       )}
 
       {/* Mobile Menu Sidebar */}
-      <div className={`fixed top-0 right-0 h-full w-80 bg-white dark:bg-gray-900 shadow-2xl transform transition-transform duration-300 ease-in-out z-50 lg:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+      <div className={`fixed top-0 right-0 h-full w-80 bg-white dark:bg-gray-900 shadow-2xl transform transition-transform duration-300 ease-in-out z-[70] lg:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
         <div className="flex flex-col h-full">
           {/* Mobile menu header */}

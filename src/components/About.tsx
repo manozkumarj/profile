@@ -6,7 +6,7 @@ const About = () => {
                     About Me
                 </h2>
             </div>
-            <div className="w-full px-6 py-6 lg:px-12 relative z-50">
+            <div className="w-full px-6 py-6 lg:px-12 relative z-40">
                 <p className="max-w-7xl mx-auto flex items-center justify-between text-gray-600 dark:text-gray-400">
                     I'm a self-taught Web and Mobile App Developer with experience in designing new features from ideation to production,
                     implementation of wireframes and design flows into high performance software applications.
