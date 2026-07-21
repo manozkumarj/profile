@@ -26,9 +26,10 @@ const Hero = () => {
 
         {/* Greeting */}
         <div className="mb-8">
-          <h1 className="w-fit m-auto px-4 pb-2 text-3xl font-bold text-gray-800 dark:text-gray-200 border-b-4 dark:border-b-gray-200 italic">
-            Hi! I'm Manoj Kumar Jadala{' '}
-            <span className="inline-block animate-bounce">👋</span>
+          <h1 className="w-fit flex max-sm:flex-col max-sm:items-center max-sm:pb-4 gap-4 m-auto px-4 pb-2 text-3xl font-bold text-gray-800 dark:text-gray-200 border-b-4 dark:border-b-gray-200 italic">
+            <span>Hi! I'm Manoj Kumar Jadala{' '}</span>
+            {/* <span className="inline-block animate-bounce">👋</span> */}
+            <img src="https://user-images.githubusercontent.com/39955420/147578264-bae0526c-028a-49d2-8af8-d08bb4edbd2a.gif" height="30" width="35" />
           </h1>
         </div>
 
